@@ -40,7 +40,7 @@ class SignUp(generic.CreateView):
 def facerecog(request):
     video_capture = cv2.VideoCapture(0)
 
-    filename = os.path.join("F:\\", "suneel", "suneel", "Nokia Django", "myproject", "media")
+    filename = os.path.join(".","media")
     java_file = filename+'\\'+'client_secret.json'
     scope = [r'https://spreadsheets.google.com/feeds', r'https://www.googleapis.com/auth/drive']
     creds = ServiceAccountCredentials.from_json_keyfile_name(java_file, scope)
