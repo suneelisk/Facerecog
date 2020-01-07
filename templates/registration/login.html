@@ -1,0 +1,28 @@
+<!-- templates/registration/login.html -->
+<html>
+<head>
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<style>
+body {
+background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Hi4jr1256h5Btr9tQnf6-dqvZ0jS4JlINl4AJt_QM9s03nCSzw&s');
+}
+</body>
+</style>
+
+<!---<body style="background-color:white;"></body>-->
+<div style="text-align:center;">
+<h2><font color = "#3FEA1C">Login</font></h2>
+<center><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS8VRDA4Lo47El7KWKsyXgFnnaYRJg24-mN93D_7NdDjFTpWiWOw&s" height="200" width="300"></img></center>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form
+</div>
+{% endblock %}
+<html>
+<head>
